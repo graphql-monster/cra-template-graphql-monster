@@ -9,7 +9,7 @@ function Home() {
         <h1>GraphQL Monster JavaScript Template</h1>
         <p>
           This page is public and accesible for all visitors / users
-          Edit <code>src/containers/public/Home/Home.tsx</code> and save to reload.
+          Edit <code>src/pages/public/Home/Home.tsx</code> and save to reload.
         </p>
         <span>
           <span>Learn </span>
