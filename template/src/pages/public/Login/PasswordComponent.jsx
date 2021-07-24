@@ -1,6 +1,5 @@
 import React from 'react'
 import { Form, ProgressBar } from 'react-bootstrap'
-import { IPasswordStrongResult } from '../../../app/utils'
 
 export const PasswordComponent = ({onPasswordChange, password, strongPassword}) => (
     <Form.Group controlId="formBasicPassword">

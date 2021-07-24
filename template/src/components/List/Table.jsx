@@ -1,12 +1,10 @@
 import { useMutation, useQuery } from '@apollo/client'
-import { DocumentNode } from 'graphql'
 import React, { useState } from 'react'
 import { Table as BTable } from 'react-bootstrap'
 import DeleteModal from '../DeleteModal/DeleteModal'
 import Loading from '../Loading/Loading'
 import Unauthorized from '../Unauthorized/Unauthorized'
-import { IListRowParams, ListRow } from './Row'
-import { IFilteredField } from './RowItem'
+import { ListRow } from './Row'
 
 export const Table = ({ filter, name, adminMode = false, queries, fields, onEdit, getEditLink }) => {
   const [unauthorized, setUnauthorized] = useState(false)

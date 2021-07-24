@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Alert, Button, Form } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { useAppDispatch } from '../../../app/hooks';
-import { changeState, login, UserToken } from '../../../app/reducers/userSlice';
+import { changeState, login} from '../../../app/reducers/userSlice';
 import { getGraphqlMonsterClientAppRoot } from '../../../app/utils';
 import { isEmailValid } from './utils';
 

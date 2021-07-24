@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import './Row.css'
-import { ListRowItem, IFilteredField } from './RowItem'
+import { ListRowItem } from './RowItem'
 
 export const ListRow = ({ item, onDelete, name, fields = ['id'], showDelete = false, onEdit, getEditLink }) => {
   const doEdit = useCallback(() => {

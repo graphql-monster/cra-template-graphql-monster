@@ -3,8 +3,7 @@ import { Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import './FilteredList.css'
 import FilterItem from './FilterItem'
-import { IFilteredField } from './RowItem'
-import Table, { ITableList, ITableQueries } from './Table'
+import Table from './Table'
 
 const createFilter = () => {
   const obj = []

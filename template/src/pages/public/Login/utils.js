@@ -1,25 +1,20 @@
 
 
-export const isEmailValid = (email: string) => {
+export const isEmailValid = (email) => {
     if(process.env.NODE_ENV === 'development') return true
 
     return new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(email)
 }
 
-export const isPasswordValid = (password: string) => {
+export const isPasswordValid = (password) => {
     //if(process.env.NODE_ENV === 'development') return true
 
     const regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
     return regularExpression.test(password)
 }
 
-export interface IPasswordStrongResult {
-    valid: boolean
-    strong: number
-    name: string
-    variant: string
-}
-export const passwordStrong = (password: string):IPasswordStrongResult => {
+
+export const passwordStrong = (password) => {
     const length = password.length
 
     if(length < 1){
@@ -28,7 +23,7 @@ export const passwordStrong = (password: string):IPasswordStrongResult => {
            strong: 0,
            name: '',
            variant: 'danger'  
-        } as IPasswordStrongResult
+        } 
     }
 
     if(length >= 15){
@@ -37,7 +32,7 @@ export const passwordStrong = (password: string):IPasswordStrongResult => {
             strong: 100,
             name: 'strong',
             variant: 'success' 
-         } as IPasswordStrongResult
+         } 
     }
 
     const capital = /(?=.*[A-Z]){2,}/.test(password) ? 2 : ( /(?=.*[A-Z])/.test(password) ? 1 : 0)
@@ -56,6 +51,6 @@ export const passwordStrong = (password: string):IPasswordStrongResult => {
         strong: percentage * 10,
         name: value > 6 ? 'strong' : (value > 4 ? 'intermediate' : (valid ? 'weak' : 'poor')),
         variant: percentage > 6 ? 'success' : (valid ? 'warning' : 'danger'),
-    } as IPasswordStrongResult
+    } 
     
 }
